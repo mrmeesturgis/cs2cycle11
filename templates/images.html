@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>When you click a button it will change the text of sample paragraph.</p>
+
+<p id="demo">I am sample paragraph.</p>
+<img src="{{url_for('static', filename='p13.jpeg')}}" id="pic1">
+
+<button onclick="change_text()">Text</button>
+<button onclick="changeSrc()">Image</button>
+
+
+  <div>Click the image:</div>
+  <br /><br />
+  <img src="{{url_for('static', filename='p13.jpeg')}}" onclick="changeImage(this)" />
+
+
+
+ 
+<script>
+
+function change_text(){
+    document.getElementById("demo").innerHTML = "You clicked the button, I am a new paragraph.";
+}
+
+function changeSrc(){
+	alert("Changing pic")
+	document.getElementById("pic1").src ="{{url_for('static', filename='p12.jpeg')}}";
+}
+
+function changeImage(image) {
+        image.src = "{{url_for('static', filename='p12.jpeg')}}";
+    }
+
+
+</script>
+
+</body>
+</html>

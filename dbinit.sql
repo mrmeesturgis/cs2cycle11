@@ -1,0 +1,27 @@
+DROP DATABASE IF EXISTS newtest;
+CREATE DATABASE newtest;
+USE newtest;
+
+CREATE TABLE phone (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+    brand VARCHAR(30),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE car (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+    brand VARCHAR(30),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE shoe (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+    brand VARCHAR(30),
+    PRIMARY KEY (id)
+);
+
+INSERT INTO car (name, brand) VALUES ("RAV4", "TOYOTA");
+
